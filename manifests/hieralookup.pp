@@ -1,7 +1,7 @@
-class puppet_tests::hieralookup (
+class various::hieralookup (
   $time_server
 )  {
-include puppet_tests
+include various
 
 notify { "time server is ${time_server}": }
 

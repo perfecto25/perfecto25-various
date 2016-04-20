@@ -1,4 +1,4 @@
-class puppet_tests::windows_config {
+class various::windows_config {
 
 include acl  
 include chocolatey

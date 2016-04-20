@@ -1,4 +1,4 @@
-class puppet_tests::fromconsole {
+class various::fromconsole {
 
 notify { "this is from CONSOLE": }
 

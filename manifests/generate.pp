@@ -1,4 +1,4 @@
-class puppet_tests::generate {
+class various::generate {
   
   file { "/tmp/netstat":  
     ensure   => file,

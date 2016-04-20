@@ -1,4 +1,4 @@
-class puppet_tests::augeas {
+class various::augeas {
 
 augeas { 'krb': 
   context => '/files/etc/krb5.conf/main',

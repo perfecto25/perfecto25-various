@@ -1,4 +1,4 @@
-class puppet_tests::concat {
+class various::concat {
 
 $file = '/etc/motd'
 

@@ -1,4 +1,4 @@
-class puppet_tests::fromsite {
+class various::fromsite {
 
 $basemodulepath = ::basemodulepath
 

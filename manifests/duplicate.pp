@@ -1,4 +1,4 @@
-class puppet_tests::duplicate {
+class various::duplicate {
 
 file { 'demo':
   ensure => file,

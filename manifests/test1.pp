@@ -1,4 +1,4 @@
-class puppet_tests::test1 {
+class various::test1 {
 
   file_line { 'hosts_file':
   ensure => present,

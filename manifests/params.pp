@@ -1,4 +1,4 @@
-class puppet_tests::params {
+class various::params {
 
 $bash_path="/bin:/usr/bin"
 $user="Mike"

@@ -1,4 +1,4 @@
-class puppet_tests::htop {
+class various::htop {
 
 package { 'htop':
   ensure => present,

@@ -1,12 +1,11 @@
-class puppet_tests::definedTypes {
-
-  define hello_define ($contentvar) {
-    file {"$title":
-      ensure  => file,
-      content => $contentvar,
-    }
+define hello_define ($contentvar) {
+  file {"title":
+    ensure => file,
+    content => $contentvar,
   }
+}
 
+class various::definedTypes {
 
   hello_define { '/tmp/hello1':
     contentvar => "hello there 1",

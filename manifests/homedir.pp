@@ -1,4 +1,4 @@
-class puppet_tests::homedir {
+class various::homedir {
 
 $roothome = homedir('root')
 $testhome = homedir('mrx')

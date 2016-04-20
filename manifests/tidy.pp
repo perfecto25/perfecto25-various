@@ -1,4 +1,4 @@
-class puppet_tests::tidy {
+class various::tidy {
 
 tidy { 'myfile':
   path    => '/tmp',

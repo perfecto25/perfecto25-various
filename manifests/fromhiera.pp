@@ -1,4 +1,4 @@
-class puppet_tests::fromhiera {
+class various::fromhiera {
   
   $bizunit=hiera(biz_unit)
 

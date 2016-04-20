@@ -1,4 +1,4 @@
-class puppet_tests::glances {
+class various::glances {
 
 
 package { 'glances':
