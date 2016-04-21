@@ -1,5 +1,6 @@
 class various::windows_config {
 
+  #comment w
 include acl  
 include chocolatey
 
