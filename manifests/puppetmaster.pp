@@ -7,11 +7,6 @@ class various::puppetmaster {
     provider => gem,
   }
 
-  package { 'hiera-eyaml':
-    ensure   => present,
-    provider => gem,
-  }
-
 
 #SSH key for r10k/Code Manager to connect to GitHub
 $r10k_ssh_key_file = '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
