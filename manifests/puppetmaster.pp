@@ -44,5 +44,20 @@ $r10k_ssh_key_file = '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
     mode    => '0644',
     require => Exec['create r10k ssh key'],
   }
-  
+ 
+
+  ## HIERA config
+ class { '::hiera':
+    hierarchy          => [ 'nodes/%{::hostname}','%{::operatingsystem}','common',],
+    hiera_yaml         => '/etc/puppetlabs/puppet/hiera.yaml',
+    datadir            => '/etc/puppetlabs/code/environments/%{::environment}/hieradata',
+    puppet_conf_manage => true,
+    create_symlink     => true,
+    eyaml              => true,
+    eyaml_extension    => 'yaml',
+    owner              => 'pe-puppet',
+    group              => 'pe-puppet',
+    notify             => Service['pe-puppetserver'],
+  }
+
 }
