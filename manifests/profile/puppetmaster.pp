@@ -1,6 +1,6 @@
 ## PERFECTO25 PuppetMaster setup
 
-class various::puppetmaster {
+class various::profile::puppetmaster {
 
   package { 'puppet-lint':
     ensure   => present,
@@ -43,12 +43,12 @@ $r10k_ssh_key_file = '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
 
   ## HIERA config
  class { '::hiera':
-    hierarchy          => [ 'nodes/%{::hostname}','%{::operatingsystem}','common',],
+    hierarchy          => [ 'node/%{::hostname}','%{::operatingsystem}','common'],
     hiera_yaml         => '/etc/puppetlabs/puppet/hiera.yaml',
     datadir            => '/etc/puppetlabs/code/environments/%{::environment}/hieradata',
     puppet_conf_manage => true,
     create_symlink     => true,
-    eyaml              => true,
+    eyaml              => false,
     eyaml_extension    => 'yaml',
     owner              => 'pe-puppet',
     group              => 'pe-puppet',
