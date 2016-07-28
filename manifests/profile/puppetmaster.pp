@@ -43,7 +43,7 @@ $r10k_ssh_key_file = '/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
 
   ## HIERA config
  class { '::hiera':
-    hierarchy          => [ 'node/%{::hostname}','%{::operatingsystem}','common'],
+    hierarchy          => [ 'node/%{::hostname}','os/%{::os.name}','common'],
     hiera_yaml         => '/etc/puppetlabs/puppet/hiera.yaml',
     datadir            => '/etc/puppetlabs/code/environments/%{::environment}/hieradata',
     puppet_conf_manage => true,
